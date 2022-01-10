@@ -73,16 +73,19 @@ console.log(addLailaToArray(["mohee","bubba","stinko"]));
 function eliminateTeam(teams) {
   // Your code here
 
-  teams.splice(teams.length-1);
-  return teams
-
+  let lastTeam
+  lastTeam=teams.pop(teams.length-1);
+  return lastTeam
 }
 
-teams = eliminateTeam(["barca","kuwait","india"]);
 
-teams.splice(0,1);
+// tester
 
-console.log(teams);
+// teams = eliminateTeam(["barca","kuwait","india"]);
+
+// teams.splice(0,1);
+
+// console.log(teams);
 
 
 
@@ -114,8 +117,10 @@ function secondHalfOfArrayIfItIsEven(fruits) {
 
 }
 
-fruits = secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "dragonfruit"]);
-console.log(fruits);
+
+// Tester
+// fruits = secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "dragonfruit"]);
+// console.log(fruits);
 
 
 /**
@@ -134,26 +139,41 @@ console.log(fruits);
  */
 function youGottaCalmDown(shout) {
   // Your code here
-if(shout.indexOf("!") !==-1){
+if(shout.indexOf("!") === -1){
   return shout
 }
 
-else if(shout.indexOf("1")>=0);
+else if (shout.indexOf("!")>0) {
 
-start = shout.indexOf("!") - 1;
+let start
+start = shout.indexOf("!")+1;
 
-shout.slice(0, start);
+shout = shout.slice(0, start);
 
 return shout
 
 }
 
-shout = (youGottaCalmDown("hey maq!!"));
+else {
+  
+  return shout
 
-console.log(shout.indexOf("!"));
-console.log(shout.split("!").length-1);
 
-console.log(shout);
+}
+
+
+}
+
+
+
+// Tester
+
+// shout = (youGottaCalmDown("hey maq"));
+
+// console.log(shout.indexOf("!"));
+// console.log(shout.split("!").length-1);
+
+// console.log(shout);
 
 
 module.exports = {
