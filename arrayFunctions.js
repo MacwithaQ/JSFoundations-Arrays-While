@@ -10,7 +10,17 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
+  if (numbers.length % 2 == 1){
+    return true 
+  }
+    else {
+      return false
+    }
 }
+
+console.log(isArrayLengthOdd([1,2,3,4]))
+
+
 
 /**
  * isArrayLengthEven(numbers):
@@ -24,7 +34,15 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   // Your code here
+  if (numbers.length % 2 == 0){
+    return true 
+  }
+    else {
+      return false
+    }
 }
+
+console.log(isArrayLengthEven([1,2,3,4]));
 
 /**
  * addLailaToArray(instructors):
@@ -36,7 +54,13 @@ function isArrayLengthEven(numbers) {
  */
 function addLailaToArray(instructors) {
   // Your code here
+  instructors.push("Laila");
+  return instructors
+
 }
+
+console.log(addLailaToArray(["mohee","bubba","stinko"]));
+
 
 /**
  * eliminateTeam(teams):
@@ -48,7 +72,20 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   // Your code here
+
+  teams.splice(teams.length-1);
+  return teams
+
 }
+
+teams = eliminateTeam(["barca","kuwait","india"]);
+
+teams.splice(0,1);
+
+console.log(teams);
+
+
+
 
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
@@ -62,7 +99,24 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+
+  if(fruits.length % 2 == 0){
+
+    fruits.splice(0,fruits.length/2)
+    return fruits
+  }
+  else{
+    fruits.length=0;
+    return fruits
+
+  }
+
+
 }
+
+fruits = secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi", "dragonfruit"]);
+console.log(fruits);
+
 
 /**
  * youGottaCalmDown(shout):
@@ -80,7 +134,27 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
+if(shout.indexOf("!") !==-1){
+  return shout
 }
+
+else if(shout.indexOf("1")>=0);
+
+start = shout.indexOf("!") - 1;
+
+shout.slice(0, start);
+
+return shout
+
+}
+
+shout = (youGottaCalmDown("hey maq!!"));
+
+console.log(shout.indexOf("!"));
+console.log(shout.split("!").length-1);
+
+console.log(shout);
+
 
 module.exports = {
   isArrayLengthOdd,
